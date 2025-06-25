@@ -9,3 +9,7 @@ def read_root():
 @app.get("/hello/{name}")
 def read_item(name: str):
     return {"message": f"Hello {name}"}
+
+@app.get("healthz")
+def read_api_health():
+    return {"status": "ok"}
